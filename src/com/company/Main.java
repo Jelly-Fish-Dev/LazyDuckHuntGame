@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.Scanner;
 import java.util.Timer;
 public class Main {
@@ -20,6 +21,8 @@ public class Main {
         {
             Animal huntee;
             int rng = (int)(Math.random() * 3 +1);
+
+            System.out.println( "Current Score: " + User.getScore());
 
             switch (rng) {
                 case 1:
@@ -42,6 +45,8 @@ public class Main {
             {
                 huntee.Take_Damage(100);
                 System.out.println( huntee.Get_Name() + " has died" );
+                System.out.println( "Added 5 points" );
+                User.addscore( 5 );
 
             }else
             {

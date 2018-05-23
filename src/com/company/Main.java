@@ -7,7 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        StartGameSpace();
+       // StartGameSpace();
+        UserInterface ui = new UserInterface();
+        ui.begin();
         
     }
 

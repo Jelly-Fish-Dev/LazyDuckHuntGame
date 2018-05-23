@@ -17,8 +17,33 @@ public class Main {
 
         while (true)
         {
+            Animal huntee;
             int rng = (int)(Math.random() * 3 +1);
-            System.out.print(rng);
+
+            switch (rng) {
+                case 1:
+                    huntee = new Duck ( "Daffy", 5 );
+                    break;
+                 case 2:
+                    huntee = new Deer ( "Bambi", 10 );
+                    break;
+
+                default:
+                    System.out.println( "Nothing Appeared" );
+                    continue;
+            }
+
+            System.out.println( huntee.toString() );
+            System.out.println( "Shoot (Y/N)?");
+            String in = scan.nextLine();
+
+            if( in.toCharArray()[0] == 'Y')
+            {
+                huntee.Take_Damage(100);
+            }else
+            {
+                System.out.println(huntee.Get_Name() + " got away");
+            }
         }
 
     }

@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Player {
     int score;
     String Name;
-    double avgTime;
 
     Player( String n )
     {
@@ -19,7 +18,6 @@ public class Player {
 
     void CreatePlayer(Scanner scan)
     {
-        System.out.println("Plaese enter your name:");
         this.Name = scan.nextLine();
     }
 

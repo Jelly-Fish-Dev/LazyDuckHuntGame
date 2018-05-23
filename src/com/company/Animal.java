@@ -20,10 +20,6 @@ public class Animal {
     void Take_Damage ( int Damage )
     {
         this.Health -= Damage;
-        if (this.Health <= 0)
-        {
-            System.out.println( this.Name + " has died" );
-        }
     }
 
     @Override

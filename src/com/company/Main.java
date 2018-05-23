@@ -13,6 +13,7 @@ public class Main {
     static void StartGameSpace ()
     {
         Scanner scan = new Scanner(System.in);
+        System.out.println("Plaese enter your name:");
         Player User = new Player( scan );
 
         while (true)
@@ -40,6 +41,8 @@ public class Main {
             if( in.toCharArray()[0] == 'Y')
             {
                 huntee.Take_Damage(100);
+                System.out.println( huntee.Get_Name() + " has died" );
+
             }else
             {
                 System.out.println(huntee.Get_Name() + " got away");
@@ -48,8 +51,4 @@ public class Main {
 
     }
 
-    void SpawnDuck()
-    {
-        System.out.println("QUack");
-    }
 }
